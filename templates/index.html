@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Automated Credit Scoring System — AI-powered credit risk evaluation platform using machine learning for instant lending decisions.">
+    <title>Automated Credit Scoring System | AI-Powered Risk Assessment</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏦</text></svg>">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+    <!-- ======= NAVBAR ======= -->
+    <nav class="navbar" id="main-nav">
+        <a href="/" class="navbar-brand">
+            <span class="navbar-logo">🏦</span>
+            <div>
+                <div class="navbar-title">Credit Scoring System</div>
+                <div class="navbar-subtitle">AI-Powered Risk Engine</div>
+            </div>
+        </a>
+    </nav>
+
+    <!-- ======= TAB NAVIGATION ======= -->
+    <div class="tab-nav" id="tab-navigation">
+        <button class="tab-btn active" data-tab="dashboard" id="tab-btn-dashboard">🏠 Home Dashboard</button>
+        <button class="tab-btn" data-tab="assessment" id="tab-btn-assessment">🛡️ Risk Assessment</button>
+        <button class="tab-btn" data-tab="analytics" id="tab-btn-analytics">📉 Analytics</button>
+        <button class="tab-btn" data-tab="contact" id="tab-btn-contact">✉️ Contact</button>
+    </div>
+
+    <!-- ======= MAIN CONTENT ======= -->
+    <main class="main-content">
+
+        <!-- ===== TAB 1: HOME DASHBOARD ===== -->
+        <section class="tab-panel active" id="dashboard">
+            <h1 class="section-title">Automated Credit Scoring System</h1>
+            <p class="section-subtitle">Welcome to the next-generation credit risk evaluation platform.</p>
+
+            <h2 class="section-heading">📊 System Overview</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <span class="metric-icon">⚡</span>
+                    <div class="metric-label">System Status</div>
+                    <div class="metric-value">Active 🟢</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-icon">🎯</span>
+                    <div class="metric-label">Model Base Accuracy</div>
+                    <div class="metric-value">91.20%</div>
+                </div>
+                <div class="metric-card">
+                    <span class="metric-icon">🔐</span>
+                    <div class="metric-label">Operational Pipeline</div>
+                    <div class="metric-value">Secured via SMOTE</div>
+                </div>
+            </div>
+
+            <div class="info-banner" id="info-banner">
+                💡 Navigate to the <strong>Risk Assessment</strong> tab to evaluate a new credit application.
+            </div>
+        </section>
+
+        <!-- ===== TAB 2: RISK ASSESSMENT ===== -->
+        <section class="tab-panel" id="assessment">
+            <h1 class="section-title">Risk Assessment Engine</h1>
+            <p class="section-subtitle">Enter the applicant's details below for real-time evaluation.</p>
+
+            <div class="form-card">
+                <form id="credit-form">
+                    <div class="form-section-title">👤 Identity Context</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="full_name">Full Name</label>
+                            <input type="text" id="full_name" name="full_name" value="Ahmad Ramzan" required placeholder="Enter applicant's full legal name">
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" name="age" value="25" min="18" max="100" required>
+                        </div>
+                    </div>
+
+                    <div class="form-section-title">💰 Financial Parameters</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="amount">Requested Credit Amount (USD)</label>
+                            <input type="number" id="amount" name="amount" value="5000" step="500" min="0" required>
+                        </div>
+                        <div class="slider-container">
+                            <label for="duration">Loan Duration</label>
+                            <div class="slider-wrapper">
+                                <input type="range" id="duration" name="duration" min="6" max="72" value="24">
+                                <span class="slider-value" id="duration-value">24 months</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section-title">🏠 Background Attributes</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="housing">Housing Status</label>
+                            <select id="housing" name="housing">
+                                <option value="Own" selected>Own</option>
+                                <option value="Rent">Rent</option>
+                                <option value="Free">Free</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="purpose">Purpose of Loan</label>
+                            <select id="purpose" name="purpose">
+                                <option value="Car" selected>Car</option>
+                                <option value="Education">Education</option>
+                                <option value="Business">Business</option>
+                                <option value="Home Repairs">Home Repairs</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-primary" id="submit-btn">🔍 Analyze Credit Application</button>
+                </form>
+
+                <div class="result-container" id="result-container"></div>
+            </div>
+
+            <div class="privacy-notice">
+                🔒 Data Privacy Notice: All client data is end-to-end encrypted and handled strictly per banking compliance regulations.
+            </div>
+        </section>
+
+        <!-- ===== TAB 3: ANALYTICS ===== -->
+        <section class="tab-panel" id="analytics">
+            <h1 class="section-title">Analytical Insights</h1>
+            <p class="section-subtitle">Model transparency, evaluation matrices, and risk driver metrics.</p>
+
+            <div class="analytics-grid">
+                <!-- Performance Metrics -->
+                <div class="analytics-card">
+                    <h3>📈 Model Performance Metrics</h3>
+                    <div class="perf-metric-row">
+                        <span class="perf-metric-name">Accuracy</span>
+                        <div class="perf-bar-container"><div class="perf-bar" data-value="91.20"></div></div>
+                        <span class="perf-metric-value">91.20%</span>
+                    </div>
+                    <div class="perf-metric-row">
+                        <span class="perf-metric-name">Precision</span>
+                        <div class="perf-bar-container"><div class="perf-bar" data-value="88.45"></div></div>
+                        <span class="perf-metric-value">88.45%</span>
+                    </div>
+                    <div class="perf-metric-row">
+                        <span class="perf-metric-name">Recall</span>
+                        <div class="perf-bar-container"><div class="perf-bar" data-value="87.90"></div></div>
+                        <span class="perf-metric-value">87.90%</span>
+                    </div>
+                    <div class="perf-metric-row">
+                        <span class="perf-metric-name">F1 Score</span>
+                        <div class="perf-bar-container"><div class="perf-bar" data-value="88.15"></div></div>
+                        <span class="perf-metric-value">88.15%</span>
+                    </div>
+                </div>
+
+                <!-- Confusion Matrix -->
+                <div class="analytics-card">
+                    <h3>🧮 Confusion Matrix</h3>
+                    <table class="cm-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Predicted Good</th>
+                                <th>Predicted Bad</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th>Actual Good</th>
+                                <td class="cm-tp">166</td>
+                                <td class="cm-fp">9</td>
+                            </tr>
+                            <tr>
+                                <th>Actual Bad</th>
+                                <td class="cm-fn">13</td>
+                                <td class="cm-tn">62</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Feature Importance -->
+            <div class="analytics-card">
+                <h3>🔬 Top Risk Drivers Steering the Credit Scoring Engine</h3>
+                <div class="feature-list">
+                    <div class="feature-item">
+                        <span class="feature-name">credit_amount</span>
+                        <div class="feature-bar-wrap"><div class="feature-bar" data-value="100"><span class="feature-bar-val">0.28</span></div></div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-name">month_duration</span>
+                        <div class="feature-bar-wrap"><div class="feature-bar" data-value="82"><span class="feature-bar-val">0.23</span></div></div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-name">age</span>
+                        <div class="feature-bar-wrap"><div class="feature-bar" data-value="50"><span class="feature-bar-val">0.14</span></div></div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-name">checking_status_no checking</span>
+                        <div class="feature-bar-wrap"><div class="feature-bar" data-value="36"><span class="feature-bar-val">0.10</span></div></div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-name">savings_status_no savings</span>
+                        <div class="feature-bar-wrap"><div class="feature-bar" data-value="25"><span class="feature-bar-val">0.07</span></div></div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-name">employment_&lt;1yr</span>
+                        <div class="feature-bar-wrap"><div class="feature-bar" data-value="18"><span class="feature-bar-val">0.05</span></div></div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-name">purpose_new car</span>
+                        <div class="feature-bar-wrap"><div class="feature-bar" data-value="14"><span class="feature-bar-val">0.04</span></div></div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-name">installment_rate</span>
+                        <div class="feature-bar-wrap"><div class="feature-bar" data-value="11"><span class="feature-bar-val">0.03</span></div></div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-name">other_parties_guarantor</span>
+                        <div class="feature-bar-wrap"><div class="feature-bar" data-value="9"><span class="feature-bar-val">0.025</span></div></div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-name">housing_rent</span>
+                        <div class="feature-bar-wrap"><div class="feature-bar" data-value="7"><span class="feature-bar-val">0.02</span></div></div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-name">credit_history_critical</span>
+                        <div class="feature-bar-wrap"><div class="feature-bar" data-value="5"><span class="feature-bar-val">0.015</span></div></div>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-name">property_no known</span>
+                        <div class="feature-bar-wrap"><div class="feature-bar" data-value="4"><span class="feature-bar-val">0.01</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TAB 4: CONTACT ===== -->
+        <section class="tab-panel" id="contact">
+            <h1 class="section-title">Contact & Support</h1>
+            <p class="section-subtitle">Reach out to our engineering team for technical support or inquiries.</p>
+
+            <div class="contact-card">
+                <div class="contact-header">Ahmad Ramzan</div>
+                <div class="contact-role">Machine Learning Engineer</div>
+
+                <div class="contact-detail">
+                    <span class="icon">🎓</span>
+                    <span><strong>Academic Context:</strong> The Islamia University of Bahawalpur</span>
+                </div>
+
+                <div class="contact-divider"></div>
+
+                <div class="contact-detail">
+                    <span class="icon">📧</span>
+                    <span><strong>Email:</strong> <a href="mailto:mahmadramzan06@gmail.com" class="contact-link">mahmadramzan06@gmail.com</a></span>
+                </div>
+                <div class="contact-detail">
+                    <span class="icon">📱</span>
+                    <span><strong>Phone:</strong> <a href="tel:+923079754301" class="contact-link">+923079754301</a></span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ======= FOOTER ======= -->
+    <footer class="footer" id="footer">
+        © 2026 Credit Scoring System — Built by Ahmad Ramzan | CodeAlpha Internship
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
